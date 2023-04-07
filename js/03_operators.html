@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<title>Operatori javascript</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<style>em {color: green}</style>
+	</head>
+	<body style="font-family: arial">
+		<h2>Operatori aritmetici</h2>
+
+		<em>v1</em> è una variabile con valore
+		<em id="v1Id"></em> e tipo <em id="v1TId"></em><br />
+		<em>v2</em> è una variabile con valore
+		<em id="v2Id"></em> e tipo <em id="v2TId"></em><br />
+		<em>v3</em> è una variabile con valore
+		<em id="v3Id"></em> e tipo <em id="v3TId"></em><br />
+
+		<ul>
+			<li>v1+v2 = <em id="r1Id"></em> di tipo
+			<em id="r1TId"></em></li>
+			<li>v1*v2 = <em id="r2Id"></em> di tipo
+			<em id="r2TId"></em></li>
+			<li>v1*v3 = <em id="r3Id"></em> di tipo
+			<em id="r3TId"></em></li>
+			<li>v1*parseInt(v3) = <em id="r4Id"></em> di tipo
+			<em id="r4TId"></em></li>
+		</ul>
+
+		<script type="application/javascript">
+		// variabili
+		var v1 = 5, v2 = "5", v3 = "2zz";
+		
+		// scrive i valori e tipi nel documento
+		v1Id.innerHTML = v1;
+		v1TId.innerHTML = typeof v1;
+		v2Id.innerHTML = v2;
+		v2TId.innerHTML = typeof v2;
+		v3Id.innerHTML = v3;
+		v3TId.innerHTML = typeof v3;
+		
+		// numeric + string = string
+		var r1 = v1+v2;
+		r1Id.innerHTML = r1;
+		r1TId.innerHTML = typeof r1;
+		
+		// numeric * string = numeric
+		var r2 = v1*v2;
+		r2Id.innerHTML = r2;
+		r2TId.innerHTML = typeof r2;
+
+		// numeric * string = NaN
+		var r3 = v1*v3;
+		r3Id.innerHTML = r3;
+		r3TId.innerHTML = typeof r3;
+
+		// numeric * string = NaN
+		var r4 = v1*parseInt(v3);
+		r4Id.innerHTML = r4;
+		r4TId.innerHTML = typeof r4;
+		</script>	
+
+		<h2>Operatori condizionali</h2>
+
+		<em>s1</em> è una variabile con valore
+		<em id="s1Id"></em> e tipo <em id="s1TId"></em><br />
+		<em>s2</em> è una variabile con valore
+		<em id="s2Id"></em> e tipo <em id="s2TId"></em><br />
+
+		<ul>
+			<li>s1 &lt; s2 = <em id="rs1Id"></em> di tipo
+			<em id="rs1TId"></em></li>
+			<li>s1 &gt; s2 = <em id="rs2Id"></em> di tipo
+			<em id="rs2TId"></em></li>
+			<li>s1 &gt; s2 ? s1 : s2 = <em id="rs3Id"></em> di tipo
+			<em id="rs3TId"></em></li>
+		</ul>
+
+		<script type="application/javascript">
+		// variabili
+		var s1 = "Java", s2 = "C++";
+		
+		// scrive i valori e tipi nel documento
+		s1Id.innerHTML = s1;
+		s1TId.innerHTML = typeof s1;
+		s2Id.innerHTML = s2;
+		s2TId.innerHTML = typeof s2;
+		
+		// s1<s2
+		var rs1 = s1<s2;
+		rs1Id.innerHTML = rs1;
+		rs1TId.innerHTML = typeof rs1;
+		
+		// s1>s2
+		var rs2 = s1>s2;
+		rs2Id.innerHTML = rs2;
+		rs2TId.innerHTML = typeof rs2;
+
+		// (s1>s2) ? s1 : s2
+		var rs3 = (s1>s2) ? s1 : s2;
+		rs3Id.innerHTML = rs3;
+		rs3TId.innerHTML = typeof rs3;
+		</script>	
+
+		<h2>Operatore void</h2>
+
+		Questo link apre una nuova finestra ma cancella questa
+		<a href="javascript:window.open('http://www.google.com','_blank')">Apri Google</a>
+		<br />
+		Questo link apre una nuova finestra senza cancellare questa
+		usando void <a href="javascript:void window.open('http://www.google.com','_blank')">Apri Google</a>
+		<br />
+
+		<h2>Operatore delete</h2>
+
+		<em>o1</em> è una variabile oggetto con valore
+		<em id="o1Id"></em><br />
+		<em>o1.language</em> è una proprietà con valore
+		<em id="p1Id"></em> e di tipo  <em id="p1TId"></em><br />
+		<em>o1.language</em> è stata cancellata con delete e quindi è <em id="pd1Id"></em><br />
+
+		<script type="application/javascript">
+		// variabili
+		var o1 = new Object();
+		o1Id.innerHTML = o1;
+		
+		// aggiungo una proprietà
+		o1.language = "Javascript";
+		p1Id.innerHTML = o1.language;
+		p1TId.innerHTML = typeof o1.language;
+		
+		// poi la tolgo
+		delete o1.language;
+		pd1Id.innerHTML = o1.language;
+		</script>
+	</body>
+</html>

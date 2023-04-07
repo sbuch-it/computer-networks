@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Array in javascript</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<style>em {color: green}</style>
+		<script type="application/javascript" src="06_array.js"></script>
+	</head>
+	<body style="font-family: arial">
+		<h2>Operazioni su array</h1>
+    Valore <input type="text" size=10 id="valId" />
+		<input type="submit" value="push" onclick="doPush(valId,arrId)"/>			
+  	<input type="submit" value="pop" onclick="doPop(valId,arrId)"/>	<input type="submit" value="unshift" onclick="doUnshift(valId,arrId)"/>			
+    <input type="submit" value="shift" onclick="doShift(valId,arrId)"/>			
+    <input type="submit" value="set at" onclick="setAt(valId,posId,arrId)"/>			
+		<input type="text" size=2 id="posId" />
+    <input type="submit" value="get at" onclick="getAt(valId,posId,arrId)"/>			
+    <input type="submit" value="sort" onclick="sort(arrId)"/>
+		
+    <h3> Array</h3>
+    <ol start="0" id="arrId"></ol>	
+	</body>
+</html>

@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<title>Variabili javascript</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<style>em {color: green;}</style>
+	</head>
+	<body style="font-family: arial">
+		<h2>Variabili stampate da javascript</h2>
+		<em>nome</em> è una variabile javascript con valore
+		<em id="nomeId">Pippo</em> e tipo <em id="tiponomeId"></em>
+		<br>
+		<em>anni</em> è una variabile javascript con valore
+		<em id="anniId"></em> e tipo <em id="tipoanniId"></em>
+		<br>
+		<em>colore</em> è una variabile javascript con valore
+		<em id="coloreId"></em> e tipo <em id="tipocoloreId"></em>
+		<br>
+		<em>nd</em> è una variabile javascript con valore
+		<em id="ndId"></em> e tipo <em id="tipondId"></em>
+		<br>
+		<em>inf</em> è una variabile javascript con valore
+		<em id="infId"></em> e tipo <em id="tipoinfId"></em>
+		<br>
+		<em>nan</em> è una variabile javascript con valore
+		<em id="nanId"></em> e tipo <em id="tiponanId"></em>
+		<br>
+		<h2>Tipi primitivi come pseudo-oggetti</h2>
+		<em>colore</em> è una stringa di <em id="slenId"></em>
+		caratteri
+		<br>
+		<em>anni</em> è un numero con rappresentazione binaria
+		<em id="binId"></em>
+		<br>
+		<em>numval</em> è un numero con rappresentazione decimale
+		<em id="valId"></em> ed esadecimale <em id="hexvalId"></em>
+		<br>
+		<em>snum</em> è la stringa <em id="snumId"></em> con valore
+		intero <em id="sintId"></em> e valore float
+		<em id="sfloatId"></em>
+		<br>
+		<em>snonum</em> è la stringa <em id="snonumId"></em> con
+		valore intero <em id="snnId"></em> e valore esadecimale
+		<em id="snnhexId"></em>
+		<br>
+		<h2>Riferimenti e oggetti</h2>
+		<em>obj</em> è un riferimento ad un oggetto
+		<em id="objId"> </em> della classe base Object
+		<br>
+		<em>objString</em> è un riferimento ad un oggetto String
+		<em id="objSId"></em> di lunghezza <em id="objSlenId"></em>
+		<br>
+		<ul>
+		  <li>Il carattere in posizione 11 è "<em id="car11Id"></em>"
+			con codice <em id="car11codId"></em></li>
+		  <li>La prima occorrenza della sottostringa 'script' inizia a
+			<em id="fstsubId"></em></li>
+		  <li>L'ultima occorrenza della sottostringa 'script' inizia a
+			<em id="lstsubId"></em></li>
+		  <li>La prima occorrenza della sottostringa 'PHP' inizia a
+				<em id="fstphpId"></em></li>
+		  <li>La sottostringa fra le posizioni 16 e 26 è
+				<em id="sub16_26Id"></em></li>
+		  <li>La sottostringa fra le posizioni 0 e 10 in maiuscolo è
+				<em id="upsub0_10Id"></em></li>
+		  <li>La sottostringa fra le posizioni 0 e 10 in minuscolo è
+				<em id="lwsub0_10Id"></em></li>
+		</ul>
+		La stringa <em id="precId"></em> precede
+		<em id="succId"></em><br>
+		Il risultato della concatenazione di stringhe è
+		<em id="catId"></em><br>
+		
+		<script type="application/javascript">
+		// variabili di vario tipo
+		var nome = "Giovanni", anni = 5;
+		colore = "è red";
+		
+		// scrive i valori e tipi nel documento
+		nomeId.innerHTML = nome;
+		tiponomeId.innerHTML = typeof nome;
+		anniId.innerHTML = anni;
+		tipoanniId.innerHTML = typeof anni;
+		coloreId.innerHTML = colore;
+		tipocoloreId.innerHTML = typeof colore;
+	  
+		// modo alternativo
+		//document.getElementById("nomeId").innerHTML = nome;
+		//document.getElementById("tiponomeId").innerHTML = typeof nome;
+
+		// variabile non definita
+    var nd;
+		ndId.innerHTML = nd;
+		tipondId.innerHTML = typeof nd;
+
+		// variabile numerica infinita
+    var inf=Infinity;
+		infId.innerHTML = inf;
+		tipoinfId.innerHTML = typeof inf;
+
+		// variabile numerica Not a Number
+    //var nan = NaN;
+    nan = parseInt("23a");
+		nanId.innerHTML = nan;
+		tiponanId.innerHTML = typeof nan;
+		
+		// usa proprietà e applica metodi per i tipi primitivi
+		slenId.innerHTML = colore.length;
+		binId.innerHTML = anni.toString(2);
+
+		var numval = 123;
+		valId.innerHTML = numval;
+		hexvalId.innerHTML = numval.toString(16);
+		
+		var snum = "123.2*4";
+		snumId.innerHTML = snum;
+		sintId.innerHTML = parseInt(snum);
+		sfloatId.innerHTML = parseFloat(snum);
+		
+		var snonum = "ABC";
+		snonumId.innerHTML = snonum;
+		snnId.innerHTML = parseInt(snonum);
+		snnhexId.innerHTML = parseInt(snonum,16);
+
+		// oggetti
+		var obj = new Object();
+		objId.innerHTML	= obj.toString();
+		
+		// la classe String
+		var objString = new String("Javascript è un linguaggio di script");
+		objSId.innerHTML = objString;
+		objSlenId.innerHTML = objString.length;
+
+		car11Id.innerHTML = objString.charAt(11);
+		car11codId.innerHTML = objString.charCodeAt(11);
+		fstsubId.innerHTML = objString.indexOf("script");
+		lstsubId.innerHTML = objString.lastIndexOf("script");
+		fstphpId.innerHTML = objString.indexOf("PHP");
+		sub16_26Id.innerHTML = objString.substring(16,26);
+		upsub0_10Id.innerHTML = objString.substring(0,10).toUpperCase();
+		lwsub0_10Id.innerHTML = objString.substring(0,10).toLowerCase();
+		
+		var s1 = new String("javascript");
+		var s2 = new String("java");
+		if(s1.localeCompare(s2)>0) {
+			precId.innerHTML = s2;
+			succId.innerHTML = s1;
+		} else {
+			succId.innerHTML = s2;
+			precId.innerHTML = s1;			
+		}
+		
+		s3 = s1+" e "+s2+ " sono parenti alla lontana!";
+		catId.innerHTML = s3 + " (tipo: "+ typeof s3 + ")";
+		</script>	
+	</body>
+</html>
