@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Oggetti in javascript</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<style>em {color: green}</style>
+		<script type="application/javascript" src="07_object.js"></script>
+	</head>
+	<body style="font-family: arial">
+		<h2>Oggetti</h1>
+    
+    Uno! <span id="o1Id"></span> instanceof TextBox:
+    <em><span id="t1Id"></span></em> instanceof TextRichBox:
+    <em><span id="tt1Id"></span></em>
+    <ul id="pl1Id"></ul>
+    
+		Due! <span id="o2Id"></span> instanceof TextBox:
+    <em><span id="t2Id"></span></em> instanceof TextRichBox:
+    <em><span id="tt2Id"></span></em>
+    <ul id="pl2Id"></ul>
+    
+		Tre! <span id="o3Id"></span> instanceof TextBox:
+    <em><span id="t3Id"></span></em> instanceof TextRichBox:
+    <em><span id="tt3Id"></span></em>
+    <ul id="pl3Id"></ul>
+		
+		Quattro! <span id="o4Id"></span> instanceof TextBox:
+    <em><span id="t4Id"></span></em> instanceof TextRichBox:
+    <em><span id="tt4Id"></span></em>
+    <ul id="pl4Id"></ul>
+		
+		<script type="application/javascript">
+    // genera il primo oggetto della classe textBox
+    o1 = new TextBox("Tinky Winky","purple","lightgray",14);
+    o1Id.innerHTML = o1.createBox();
+  	propertiesToList(o1,pl1Id);
+    t1Id.innerHTML = o1 instanceof TextBox;
+    tt1Id.innerHTML = o1 instanceof TextRichBox;
+		
+		// genera il secondo oggetto della classe textBox
+    o2 = new TextBox("Laa-Laa","yellow","lightblue",18);
+    o2Id.innerHTML = o2.createBox();
+    propertiesToList(o2,pl2Id);
+    t2Id.innerHTML = o2 instanceof TextBox;
+    tt2Id.innerHTML = o2 instanceof TextRichBox;
+
+    // genera il primo oggetto della classe TextRichBox
+    o3 = new TextRichBox("Dipsy","green","lightyellow",12,"courier");
+    o3Id.innerHTML = o3.createBox();
+    propertiesToList(o3,pl3Id);
+    t3Id.innerHTML = o3 instanceof TextBox;
+    tt3Id.innerHTML = o3 instanceof TextRichBox;
+
+    // genera il secondo oggetto della classe textRichBox
+    o4 = new TextRichBox("Po","red","pink",20,"verdana");
+    o4Id.innerHTML = o4.createBox();
+    propertiesToList(o4,pl4Id);
+    t4Id.innerHTML = o4 instanceof TextBox;
+    tt4Id.innerHTML = o4 instanceof TextRichBox;
+    </script>     			
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Il ciclo for-in javascript</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<style>em {color: green}</style>
+	</head>
+	<body style="font-family: arial">
+		<h2>Proprietà del documento</h2>
+		<p>La lista seguente è generata col ciclo for-in sulle
+		proprietà dell'oggetto predefinito <em> document</em></p>
+		<ul id="plist"></ul>
+		<script type="application/javascript">
+			for(prop in document) {
+				plist.innerHTML += "<li><em>"+prop+"</em> tipo: <em>"+
+				  typeof document[prop] +"</em> valore: <em>"+ 
+					document[prop] + "</em></li>";
+			} 
+		</script>
+	</body>
+</html>
