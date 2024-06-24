@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Event demo</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<script type="application/javascript" src="10_functions.js"></script>
+		<style>
+		  div {
+				border-style: solid;
+		    border-collapse: collapse;
+		    border-width: 1px;
+		    border-color: black;
+			}
+		  em  {color: green}
+		</style>
+	</head>
+	<body style="font-family: arial" id="bd" onload="setEventHandlers()">
+		<h1 id="hh1">Event demo</h1>
+		<div  style="width: 200px" id="d1"><em style="background-color: lavender; color: red" id="e1">Click on me!!</em></div>
+		<br />
+		Type here <input id="t1" type="text" />
+		<h2 id="hh2">Event list</h2><input type="submit" onclick="clearList()" value="Svuota lista" />
+		<ul id="eventList"></ul>
+	</body>
+</html>

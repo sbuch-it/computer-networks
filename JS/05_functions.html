@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title>Funzioni in javascript</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<style>em {color: green}</style>
+		<script type="application/javascript" src="05_functions.js"></script>
+	</head>
+	<body style="font-family: arial">
+		<h2>Uso delle funzioni</h2>
+		
+		<p>Il valore della variabile <em>nome</em> è inserito qua -
+		<em id="qua">al posto di questo</em> - con lo style definito
+		nella variabile <em>myStyle</em> che vale
+		<em id="mstyle"></em></p>
+
+		<p><em>sumVariables()</em> è una funzione che supporta un
+		numero variabile di argomenti <ul id="sumdemo"></ul></p>
+
+		<p>Non c'è nessun controllo sul numero dei parametri passati
+		rispetto al numero di argomenti previsti.
+		<br />
+		La chiamata a <em>twoArguments(v1,v2)</em> come
+		<em>twoArguments('Java')</em> produce sull'elemento v1Id
+		<em id="v1Id"></em> e sull'elemento v2Id
+		<em id="v2Id"></em></p>
+
+		<p>Se una funzione viene ridefinita la nuova definizione
+		sostituisce la precedente.
+		<br />
+		Qua la stampa con la definizione originale di
+		<em>printJava(id)</em> - <span id="s1Id"></span> - e qua la
+		stampa dopo la nuova definizione - <span id="s2Id"></span>
+		<br />
+		La funzione è un oggetto con metodi e proprietà.
+		<ul id="fpId"></ul> Qua la chiamata alla funzione dopo averla
+		ridefinita come oggetto Function - <span id="s3Id"></span></p>
+		
+		<script type="application/javascript">
+		  // chiama la funzione originaria printJava()
+		  printJava(s1Id);
+		</script>	
+
+		<script type="application/javascript">
+		  // uso di funzione con accesso a variabili globali
+		  var nome = "Giovanni";
+		  printVariable(nome,qua);
+		  mstyle.innerHTML = myStyle;
+		  
+		  // uso di funzione con un numero variabile di argomenti
+		  sumdemo.innerHTML += "<li>sumVariables(1) = <em>"+sumVariables(1)+"</em></li>";
+		  sumdemo.innerHTML += "<li>sumVariables(1,2) = <em>"+sumVariables(1,2)+"</em></li>";
+		  sumdemo.innerHTML += "<li>sumVariables(1,2,3) = <em>"+sumVariables(1,2,3)+"</em></li>";
+		  sumdemo.innerHTML += "<li>sumVariables(1,2,3,4) = <em>"+sumVariables(1,2,3,4)+"</em></li>";
+		  sumdemo.innerHTML += "<li>sumVariables(1,2,3,4,5) = <em>"+sumVariables(1,2,3,4,5)+"</em></li>";
+		  
+		  // chiamata ad una funzione con un numero errato di parametri
+		  twoArguments('Java');
+		    
+		  // ridefinisce la funzione printJava()
+		  function printJava(el) {
+			st = "\"color: blue; background-color: gold\"";
+			el.innerHTML = "<span style="+st+">Java</span>";
+		  }
+			
+		  // chiama la funzione ridefinita printJava()
+		  printJava(s2Id);
+		  printJava.desc = "prova";
+		  
+		  // stampa le proprietà dell'oggetto funzione
+		  fpId.innerHTML += "<li>lenght: <em>"+printJava.length+"</em> (numero di argomenti previsto)</li>";
+		  fpId.innerHTML += "<li>valueOf(): <em>"+printJava.valueOf()+"</em></li>";
+		  fpId.innerHTML += "<li>toString(): <em>"+printJava.toString()+"</em></li>";
+		  fpId.innerHTML += "<li>desc: <em>"+printJava.desc+"</em></li>";
+		  
+		  // si ridefinisce la funzione con il costruttore dell'oggetto
+		  var istr1 = "st=\"\\\"color: yellow; background-color: green\\\"\";";
+		  var istr2 = "e.innerHTML=\"<span style=\"+st+\">Java</span>\";";
+		  var printJava = new Function("e",istr1+istr2);
+		  
+		  printJava(s3Id);
+		</script>	
+		
+		<h2>Variabile pippo</h2>
+		Prima document.pippo è <em id="pippo0"></em><br />
+		Dopo document.pippo è <em id="pippo1"></em><br />
+		<script type="application/javascript">
+		  pippo0.innerHTML = document.pippo;
+		  //document.pippo=2;
+		  document["pippo"]=3;
+		  pippo1.innerHTML = document.pippo;
+		</script>
+	</body>
+</html>
