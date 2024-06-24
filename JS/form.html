@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Form with validation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script src="formCheck.js" type="application/javascript"></script>
+	</head>
+	<body style="font-family: arial" onload="initCheckFncts()">
+		<h2>Inserisci i tuoi dati</h2><form method="post" action="formProcess.php" onsubmit="return checkFields();">
+			<table>
+				<tr id="trNome">
+					<td><label for="nome">Nome</label></td><td><input name="nome" id="nome" type="text" size="20" /></td>
+				</tr>
+				<tr id="trCognome">
+					<td><label for="cognome">Cognome</label></td><td><input name="cognome" id="cognome" type="text" size="20" /></td>
+				</tr>
+				<tr id="trCF">
+					<td><label for="CF">Codice Fiscale</label></td><td><input name="CF" id="CF" type="text" size="20" /></td>
+				</tr>
+				<tr id="trEmail">
+					<td><label for="email">email</label></td><td><input name="email" id="email" type="text" size="20" /></td>
+				</tr>
+			</table>
+			<input type="submit" value="Invia" />			
+		</form>
+	</body>
+</html>

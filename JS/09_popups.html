@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Oggetti in javascript</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<script type="application/javascript" src="09_functions.js"></script>
+		<style>em {color: green}</style>
+	</head>
+	<body style="font-family: arial">
+		<h1>PopUp control</h1>
+		<input type="submit" onclick="openPopup()" value="Open PopUp"/> 
+		<input type="submit" onclick="closePopup()" value="Close PopUp"/>
+		<br /><br />
+		<table>
+			<tr>
+				<td></td>
+				<td><input type="submit" onclick="movePopUp(0,-10)" value="^^"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="submit" onclick="movePopUp(-10,0)" value="<<"/></td>
+		  	<td></td>
+		    <td><input type="submit" onclick="movePopUp(10,0)" value=">>"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" onclick="movePopUp(0,10)" value="vv"/></td>
+				<td></td>
+			</tr>
+		</table>
+		<br />
+		<input type="submit" onclick="changeAds()" value="Change Ads"/>
+		<input type="submit" onclick="setAd()" value="Your Ad"/>
+		<br />
+		<input type="submit" onclick="startAdRotation()" value="Rotate Ads"/>
+		<input type="submit" onclick="stopAdRotation()" value="Stop Rotate ads"/>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="2021_09_22_B_es2.js"></script>
+  </head>
+  <body onload="setHandlers()">
+    <table>
+      <tr>
+        <td style="font-size: 16px; color: crimson;background-color: lightblue">*</td>
+        <td style="font-size: 12px; color: gold; background-color: lightpink">+</td>
+        <td style="font-size: 14px; color: fuchsia;background-color: lightyellow">-</td>
+        <td style="font-size: 16px; color: crimson;background-color: lightsalmon">+</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px;color: blueviolet;background-color: lightsalmon">*</td>
+        <td style="font-size: 12px;color: green;background-color: lightblue">-</td>
+        <td style="font-size: 16px;color: aquamarine;background-color: lightpink">+</td>
+        <td style="font-size: 14px;color: darkcyan;background-color: lightyellow">*</td>
+      </tr>
+      <tr>
+        <td style="font-size: 14px;color: gold;background-color: lightyellow">++</td>
+        <td style="font-size: 16px;color: crimson;background-color: lightsalmon">-</td>
+        <td style="font-size: 14px;color: fuchsia;background-color: lightblue">-</td>
+        <td style="font-size: 12px;color: crimson;background-color: lightpink">**</td>
+      </tr>
+      <tr>
+        <td style="font-size: 12px;color: green;background-color: lightpink">**</td>
+        <td style="font-size: 16px;color: slateblue;background-color: lightyellow">+-</td>
+        <td style="font-size: 12px;color: aquamarine;background-color: lightsalmon">--</td>
+        <td style="font-size: 14px;color: darkcyan; background-color: lightblue">+++</td>
+      </tr>
+    </table>
+    Colore dello sfondo
+    <select id="colorB">
+      <option>red</option>
+      <option>yellow</option>
+      <option>blue</option>
+    </select> <br />
+    Dimensione Carattere
+    <select id="fontSZ">
+      <option>12px</option>
+      <option>14px</option>
+      <option>16px</option>
+    </select> <br />
+    Colore di sfondo: <span id="TDcolor"></span><br />
+    Conteggio multipli: <span id="TDmultiple"></span><br />
+    <div style="background-color: lightgreen;width: 70px"  id="div1">DIV1</div>
+    <div style="background-color: salmon; width: 70px" id="div2">DIV2</div>
+  </body>
+</html>
